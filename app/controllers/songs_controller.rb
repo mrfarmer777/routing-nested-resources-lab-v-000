@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
   def index
-    if params[:artist_id].valid?
+    if Artist.find(params[:artist_id]).exists?
       @songs=Artist.find(params[:artist_id]).songs
     else
       @songs = Song.all
