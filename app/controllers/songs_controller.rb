@@ -5,7 +5,6 @@ class SongsController < ApplicationController
     else
       @songs = Song.all
       redirect_to songs_path
-
     end
   end
 
