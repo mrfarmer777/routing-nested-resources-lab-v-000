@@ -10,6 +10,8 @@ class SongsController < ApplicationController
         @artist=Artist.find(params[:artist_id])
         @songs=@artist.songs
       end
+    else
+      @songs=Song.all
     end
   end
 
