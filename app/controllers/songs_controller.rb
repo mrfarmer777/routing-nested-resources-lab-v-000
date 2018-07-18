@@ -27,6 +27,7 @@ class SongsController < ApplicationController
         @song=Son.find(id:params[:id])
       else
         redirect_to songs_path
+      end
     end
   end
 
