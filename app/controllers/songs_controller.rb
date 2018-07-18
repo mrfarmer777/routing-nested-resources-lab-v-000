@@ -1,4 +1,4 @@
-require 'flash'
+require 'rack-flash'
 
 class SongsController < ApplicationController
   def index
