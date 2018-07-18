@@ -17,14 +17,14 @@ class SongsController < ApplicationController
       else
         @artist=Artist.find(params[:artist_id])
         if Song.find(id:params[:id]).nil?
-          @song=Son.find(id:params[:id])
+          @song=Song.find(id:params[:id])
         else
           redirect_to artist_songs(@artist)
         end
       end
     else
       if Song.find(id:params[:id]).nil?
-        @song=Son.find(id:params[:id])
+        @song=Song.find(id:params[:id])
       else
         redirect_to songs_path
       end
