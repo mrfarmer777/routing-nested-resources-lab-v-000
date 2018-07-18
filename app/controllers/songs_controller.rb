@@ -20,6 +20,9 @@ class SongsController < ApplicationController
           @song=Son.find(id:params[:id])
         else
           redirect_to artist_songs(@artist)
+        end
+      end
+    end
   end
 
   def new
